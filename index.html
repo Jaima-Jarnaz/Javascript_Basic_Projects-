@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Javascript Document Website</title>
+    <style>
+    body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+    ul{
+        text-decoration: none;
+        margin-top: 23px;
+    }
+    li{
+        color: #3f51b5;
+        font-size: 24px;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div id="video_container">
+            <!-- The video -->
+            <video autoplay muted loop id="myVideo">
+                <source src="JavaScript.mp4" type="video/mp4">
+            </video>
+            
+            <!-- Optional: some overlay text to describe the video -->
+        </div>
+
+
+        <!-- Header -->
+        <header id="head-1"> 
+        <h1 id="h1">Learning  Javascript </h1>
+        <div id="button">
+            <button id="btn-1" class="btn" style="background-color: green;">Green</button>
+            <button id="btn-2" class="btn" style="background-color: orchid;">Orchid</button>
+            <button id="btn-3" class="btn" style="background-color: yellow;">Yellow</button>
+            <button id="btn-4" class="btn" style="background-color: tomato;">Violet</button>
+        </div>
+        </header>
+
+        <section id="section-calculator">
+            <h2 id="calculator-heading">Basic Calculator</h2>
+            <div id="table-container">
+                <input type="text" name="input" id="input-calculator">
+                <table>
+                    <tr>
+                        <td><button>Sin</button></td>
+                        <td><button>7</button></td>
+                        <td><button>8</button></td>
+                        <td><button>9</button></td>
+                        <td><button>÷</button></td>
+                    </tr>
+                    <tr>
+                        <td><button>Cos</button></td>
+                        <td><button>4</button></td>
+                        <td><button>5</button></td>
+                        <td><button>6</button></td>
+                        <td><button>x</button></td>
+                    </tr>
+                    <tr>
+                        <td><button>Tan</button></td>
+                        <td><button>1</button></td>
+                        <td><button>2</button></td>
+                        <td><button>3</button></td>
+                        <td><button>+</button></td>
+                    </tr>
+                    <tr>
+                        <td><button>log</button></td>
+                        <td><button>C</button></td>
+                        <td><button>=</button></td>
+                        <td><button>0</button></td>
+                        <td><button>-</button></td>
+                    </tr>
+                </table>
+            </div>
+
+        </section>
+
+        <section id="section-toDo">
+                <h2 id="h2-toDo">ToDo List</h2>
+                <div class="maindiv">
+                        <input type="text" name="" id="formInput">
+                        <button id="submitButton" type="submit">
+                            <i class="fas fa-plus"></i>
+                        </button>
+             
+                    <div class="toDo-container">
+                        <ul id="toDo-Unorderlist">
+                        </ul>
+                    </div>
+                </div>
+
+
+        </section>
+
+
+
+        <section class="section-1">
+            <div id="section-div">
+                <h2 id="h2-head">JsonPlaceholder Data</h2>
+                <div id="userlist">
+                    <ul id="ol">
+                    </ul>
+                </div>    
+
+            </div>
+
+            <div id="section-div2">
+                <button id="json-btn">Get Data</button>
+
+            </div>
+        </section>
+    </div>
+
+<script>
+    var button = document.getElementById("json-btn"); 
+
+    button.onclick = function() {
+        fetch('https://jsonplaceholder.typicode.com/users')
+        .then((response)=> { //call back annonymouse
+            return response.json()
+        })
+        .then(data => data.forEach((element, index) => {
+            var node = document.createElement("LI");   
+            var textnode = document.createTextNode(element['name']);
+            node.appendChild(textnode); 
+            document.getElementById("ol").appendChild(node); 
+        }))
+        .catch(err=> console.log(err));
+    }
+</script>
+
+
+<script>
+    // Get the video
+    var video = document.getElementById("myVideo");
+    
+    // Get the button
+    var btn = document.getElementById("myBtn");
+    
+    // Pause and play the video, and change the button text
+    function myFunction() {
+      if (video.paused) {
+        video.play();
+        btn.innerHTML = "Pause";
+      } else {
+        video.pause();
+        btn.innerHTML = "Play";
+      }
+    }
+    </script>
+
+<script src="index.js"></script>    
+<script src="https://kit.fontawesome.com/3b71e37289.js" crossorigin="anonymous"></script>
+</body>
+</html>

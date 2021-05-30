@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#head-1{
+    width: 100%;
+    background-color: #46516512;
+    height: 200px;
+    border-bottom: 2px solid #e5e9ef;
+
+}
+#h1{
+    text-align: center;
+    padding: 40px;
+    font-size: 35px;
+    color: #877fff;
+    font-weight: 700;
+}
+#button{
+    padding: 12px;
+    width: 50%;
+    margin: auto;
+    margin-right: 180px;
+
+}
+.btn{
+    padding: 10px;
+    font-size: 20px;
+    background-color: aliceblue;
+    border-radius: 11px;
+    border: 1px solid white;
+    margin: 5px;
+}
+.section-1{
+    padding: 15px;
+    min-height: 400px;
+    background-color: #eae7e7fc;
+    margin: auto;
+    display: flex;
+
+}
+#section-div{
+    width: 53%;
+    padding: 50px;
+    background-color: #e8e7f5fa;
+    height: 300px;
+    border-radius: 9px;
+    margin: 12px;
+
+}
+#section-div2{
+    width: 30%;
+    padding: 50px;
+    background-color: #faf6fd;
+    height: 300px;
+    border-radius: 9px;
+    margin: 12px;
+
+}
+#h2-head{
+    text-align: center;
+}
+
+#json-btn{
+    padding: 15px;
+    background-color: #03a9f4;
+    font-size: 20px;
+    border-radius: 12px;
+    color: white;
+    font-weight: 600;
+    margin-left: 150px;
+
+}
+
+/*calculator style*/
+
+#section-calculator{
+    background-color: #e7f1f6;
+    padding: 30px;
+
+}
+#calculator-heading{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    color: #202327;
+    margin: 10px;
+
+}
+
+#table-container{
+    background-color: #454450;
+    width: 30%;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+
+}
+table{
+    margin: auto;
+}
+button{
+    padding: 20px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+#input-calculator{
+    margin: 12px;
+    border-radius: 8px;
+    padding: 6px;
+    margin-left: 5px;
+    width: 96%;
+    font-size: 35px;
+}
+
+/*---Todo list style start-----*/
+#section-toDo{
+    background-color: #0d181b;
+    padding: 30px;
+    height: 35rem;
+
+
+}
+.maindiv{
+    margin: auto;
+    width: 55%;
+}
+#toDo-container{
+   
+
+}
+#h2-toDo{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    color: #e5e9ef;
+}
+#formInput{
+    padding: 23px;
+    width: 75%;
+    border-radius: 6px;
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: 700;
+
+}
+#toDo-Unorderlist{
+    list-style: none;
+}
+.toDoList{
+    padding: 23px;
+    width: 75%;
+    border-radius: 6px;
+    margin: 6px;
+    background: linear-gradient(to bottom, #ffffff 0%, #99ccff 100%);
+}
+#submitButton{
+    padding: 19px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: #e5e9ef;
+}
+
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+    position: inherit;
+    max-width: 100%;
+   
+  }
+  
