@@ -1,18 +1,14 @@
-var button_element1=document.getElementById('btn-1');
-var button_element2=document.getElementById('btn-2');
-var button_element3=document.getElementById('btn-3');
-var button_element4=document.getElementById('btn-4');
+var button_element1=document.getElementById('btnGreen');
+var button_element2=document.getElementById('btnOrchid');
+var button_element3=document.getElementById('btnYellow');
+var button_element4=document.getElementById('btnTomato');
 var back_color=document.querySelector('header');
 var h1_color=document.querySelector('h1');
 
 
 button_element1.addEventListener('click',function(){
-    changebackground=Math.floor(Math.random()*255);
-    console.log(changebackground);
-    //back_color.style.backgroundColor="rgb("+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+")";
     back_color.style.backgroundColor="green";
     h1_color.style.color="white";
-    //button_element2.style.border="1px"+" "+"solid"+" "+"rgb("+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+")";
 });
 
 button_element2.addEventListener('click',function(){
@@ -94,11 +90,9 @@ for(clickedButtons of allCalculatorButtons){
 }
 
 /*---Todo list code start from here-----*/
+
 const formInput=document.getElementById("formInput");
 const submitButton=document.getElementById("submitButton");
-
-const newToDoList=document.getElementById("toDo-Unorderlist");
-console.log(newToDoList);
 
 
 var currentValue='';
@@ -107,15 +101,38 @@ formInput.addEventListener('input',function(e){
     console.log(currentValue)
 });
 
+const newUnorderToDoList=document.getElementById("toDo-Unorderlist");
 
-submitButton.addEventListener('click',function(){  
-
+ function createNewTodo(){
     const createNewToDo=document.createElement("li");
-    console.log(createNewToDo)
     createNewToDo.innerText=currentValue;
     createNewToDo.classList.add("toDoList");
-    newToDoList.appendChild(createNewToDo);
-    console.log(newToDoList);
+    newUnorderToDoList.appendChild(createNewToDo);
+    createNewToDo.id="item"+ (newUnorderToDoList.childElementCount +1);
+    let id=createNewToDo.id;
+    return newUnorderToDoList;
+ }
+
+
+    deleteTodoList=()=>{
+        var newDeleteButton=document.createElement("i");
+        newDeleteButton.classList.add("fa-trash-alt");
+        var buttonDeleteTextNode=document.createTextNode("Delete");
+        var addDeleteButton=newDeleteButton.appendChild(buttonDeleteTextNode);
+        var count=1;
+        newDeleteButton.id="btn"+count++;
+        newUnorderToDoList.appendChild(newDeleteButton);
+ }
+
+
+submitButton.addEventListener('click',()=>{
+    if(currentValue!=undefined && currentValue!=null && currentValue!=''){
+        createNewTodo();
+    }
+    else{
+        alert("Enter a valid todo item");
+    }
+    formInput.value='';
+    currentValue='';
 
 })
-

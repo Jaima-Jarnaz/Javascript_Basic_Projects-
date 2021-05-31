@@ -72,11 +72,12 @@
 
 }
 
-/*calculator style*/
+/*-----------------------calculator style-------------------------*/
 
 #section-calculator{
     background-color: #e7f1f6;
     padding: 30px;
+
 
 }
 #calculator-heading{
@@ -114,7 +115,8 @@ button{
     font-size: 35px;
 }
 
-/*---Todo list style start-----*/
+
+/*-------------Todo list style start-----------*/
 #section-toDo{
     background-color: #0d181b;
     padding: 30px;
@@ -165,9 +167,21 @@ button{
 
 
 /* Style the video: 100% width and height to cover the entire window */
+
+
 #myVideo {
     position: inherit;
     max-width: 100%;
    
   }
+
+
+
+/*------footer-----------------*/
   
+  #footer{
+    background-color: #23222f;
+    padding: 28px;
+    color: white;
+    text-align: center;
+  }
